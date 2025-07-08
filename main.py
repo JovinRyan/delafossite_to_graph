@@ -41,3 +41,5 @@ if len(sys.argv) > 1:
                 g = include.structure_to_dgl_graph(supercell, elemental_dict)
 
                 save_graphs(os.path.join(graph_save_dir, entry + ".bin"), [g])
+    else:
+        print("CSV file not found.")
