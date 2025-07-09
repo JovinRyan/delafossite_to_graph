@@ -13,7 +13,7 @@ from sklearn.preprocessing import LabelEncoder
 
 os.environ['DGLBACKEND'] = 'pytorch'
 
-def POSCAR_to_supercell(input_POSCAR_file: str, supercell_matrix = [3, 3, 3]):
+def POSCAR_to_supercell(input_POSCAR_file: str, supercell_matrix = [1, 1, 1]):
   structure = Poscar.from_file(input_POSCAR_file).structure
 
   return structure.make_supercell(supercell_matrix)
